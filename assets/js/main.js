@@ -8,7 +8,7 @@ new Vue({
     },
     mounted () {
         axios
-            .get('https://api.github.com/orgs/azerothcore/repos?per_page=100;sort=updated;direction=desc')
+            .get('https://api.github.com/orgs/azerothcore/repos?per_page=100&sort=updated&direction=desc')
             .then(response => {this.repositories = response.data})
             .catch(error => {console.log(error)})
             .finally(() => this.loading = false)
