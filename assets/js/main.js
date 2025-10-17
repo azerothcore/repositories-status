@@ -4,8 +4,37 @@ new Vue({
       return {
         repositories: [],
         loading: true,
-        error: null
+        error: null,
+        searchQuery: ''
       }
+    },
+    computed: {
+        filteredRepositories() {
+            if (!this.searchQuery) {
+                return this.repositories
+            }
+
+            const query = this.searchQuery.toLowerCase().trim()
+
+            return this.repositories.filter(repo => {
+                const name = repo.name ? repo.name.toLowerCase() : ''
+                const description = repo.description ? repo.description.toLowerCase() : ''
+                const topics = repo.topics ? repo.topics.join(' ').toLowerCase() : ''
+
+                return name.includes(query) || description.includes(query) || topics.includes(query)
+            })
+        },
+        repositoryCount() {
+            return {
+                total: this.repositories.length,
+                filtered: this.filteredRepositories.length
+            }
+        }
+    },
+    methods: {
+        clearSearch() {
+            this.searchQuery = ''
+        }
     },
     mounted () {
         axios
