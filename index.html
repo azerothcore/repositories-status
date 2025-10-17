@@ -48,11 +48,15 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <img :src="`https://img.shields.io/github/license/azerothcore/${repository.name}.svg`" :alt="repository.name">
-                                        <img :src="`https://img.shields.io/github/stars/azerothcore/${repository.name}.svg`" :alt="repository.name">
-                                        <img :src="`https://img.shields.io/github/forks/azerothcore/${repository.name}.svg`" :alt="repository.name">
-                                        <a :href="`https://github.com/azerothcore/${repository.name}/issues`" target="_blank" rel="noopener noreferrer"><img :src="`https://img.shields.io/github/issues/azerothcore/${repository.name}.svg`" :alt="repository.name"></a>
-                                        <a :href="`https://github.com/azerothcore/${repository.name}/pulls`" target="_blank" rel="noopener noreferrer"><img :src="`https://img.shields.io/github/issues-pr/azerothcore/${repository.name}.svg`" :alt="repository.name"></a>
+                                        <img :src="`https://img.shields.io/github/license/azerothcore/${repository.name}.svg`" :alt="`${repository.name} license type`">
+                                        <img :src="`https://img.shields.io/github/stars/azerothcore/${repository.name}.svg`" :alt="`${repository.name} GitHub stars`">
+                                        <img :src="`https://img.shields.io/github/forks/azerothcore/${repository.name}.svg`" :alt="`${repository.name} GitHub forks`">
+                                        <a :href="`https://github.com/azerothcore/${repository.name}/issues`" target="_blank" rel="noopener noreferrer" :aria-label="`View open issues for ${repository.name}`">
+                                            <img :src="`https://img.shields.io/github/issues/azerothcore/${repository.name}.svg`" :alt="`${repository.name} open issues count`">
+                                        </a>
+                                        <a :href="`https://github.com/azerothcore/${repository.name}/pulls`" target="_blank" rel="noopener noreferrer" :aria-label="`View open pull requests for ${repository.name}`">
+                                            <img :src="`https://img.shields.io/github/issues-pr/azerothcore/${repository.name}.svg`" :alt="`${repository.name} open pull requests count`">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
