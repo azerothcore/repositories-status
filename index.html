@@ -43,7 +43,7 @@
                             <div v-for="repository in repositories" :key="repository.id">
                                 <div class="row">
                                     <div class="col my-2">
-                                        <strong><a target="_blank" :href="repository.html_url">{{ repository.name }}</a></strong>: <small>{{ repository.description }}</small>
+                                        <strong><a target="_blank" rel="noopener noreferrer" :href="repository.html_url">{{ repository.name }}</a></strong>: <small>{{ repository.description }}</small>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -51,8 +51,8 @@
                                         <img :src="`https://img.shields.io/github/license/azerothcore/${repository.name}.svg`" :alt="repository.name">
                                         <img :src="`https://img.shields.io/github/stars/azerothcore/${repository.name}.svg`" :alt="repository.name">
                                         <img :src="`https://img.shields.io/github/forks/azerothcore/${repository.name}.svg`" :alt="repository.name">
-                                        <a :href="`https://github.com/azerothcore/${repository.name}/issues`" target="_blank"><img :src="`https://img.shields.io/github/issues/azerothcore/${repository.name}.svg`" :alt="repository.name"></a>
-                                        <a :href="`https://github.com/azerothcore/${repository.name}/pulls`" target="_blank"><img :src="`https://img.shields.io/github/issues-pr/azerothcore/${repository.name}.svg`" :alt="repository.name"></a>
+                                        <a :href="`https://github.com/azerothcore/${repository.name}/issues`" target="_blank" rel="noopener noreferrer"><img :src="`https://img.shields.io/github/issues/azerothcore/${repository.name}.svg`" :alt="repository.name"></a>
+                                        <a :href="`https://github.com/azerothcore/${repository.name}/pulls`" target="_blank" rel="noopener noreferrer"><img :src="`https://img.shields.io/github/issues-pr/azerothcore/${repository.name}.svg`" :alt="repository.name"></a>
                                     </div>
                                 </div>
                             </div>
