@@ -40,6 +40,10 @@ new Vue({
                 })
             }
 
+            filtered.sort((a, b) => {
+                return b.open_issues_count - a.open_issues_count
+            })
+
             return filtered
         },
 
